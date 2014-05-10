@@ -1,0 +1,12 @@
+# How to Generate Password Hashes
+# ===
+# On Linux:
+#  mkpasswd --method=SHA-512
+#
+# On OSX:
+#  pip install passlib
+#  python -c "from passlib.hash import sha512_crypt; print sha512_crypt.encrypt('<password>')"
+
+---
+# unencrypted password: apAssWoRd # needed for sudo password
+deploy_password: $6$rounds=100000$dkajfdlksjflskjflksjlfkdsjlfksjf
