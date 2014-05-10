@@ -28,3 +28,10 @@ The bootstrap playbook sets up a deploy user with sudo rights which we can use i
 The vagrant user on the development box is not disabled and can still be used.
 
 `vagrant up` or `vagrant provision`
+
+### Provisioning
+
+## Things to watch out for
+
+If you rebuild a box on the same ip then expect ssh to fail.
+Clean out the related entry in `~/.ssh/known_hosts` to stop this.
