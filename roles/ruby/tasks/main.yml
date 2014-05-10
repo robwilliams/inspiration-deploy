@@ -1,0 +1,13 @@
+---
+- name: Add Brightbox Ruby Apt Repository
+  apt_repository: repo='ppa:brightbox/ruby-ng' state=present
+
+- name: Ensure Ruby 2.1 is present
+  apt: pkg={{ item }} state=present
+  with_items:
+    - "ruby2.1"
+    - "ruby2.1-dev"
+
+- name: Ensure bundler is present
+  gem: name=bundler state=present user_install=no
+

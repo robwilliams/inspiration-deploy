@@ -1,0 +1,6 @@
+---
+- name: Ensure ntp is installed
+  apt: pkg=ntp state=present
+
+- name: Ensure git is installed
+  apt: pkg=git-core state=present

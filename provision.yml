@@ -1,0 +1,13 @@
+---
+- name: All servers
+  user: deploy
+  hosts: all
+  roles:
+  - { role: common, sudo: yes }
+
+- name: Install application server
+  user: deploy
+  hosts: app
+  roles:
+    - { role: ruby, sudo: yes }
+
